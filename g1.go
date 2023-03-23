@@ -13,9 +13,12 @@ type PointG1 [3]fe
 var wnafMulWindowG1 uint = 5
 
 func (p *PointG1) Set(p2 *PointG1) *PointG1 {
-	p[0].set(&p2[0])
-	p[1].set(&p2[1])
-	p[2].set(&p2[2])
+	p2_0 := (*p2)[0]
+	p2_1 := (*p2)[1]
+	p2_2 := (*p2)[2]
+	p[0].set(&p2_0)
+	p[1].set(&p2_1)
+	p[2].set(&p2_2)
 	return p
 }
 
